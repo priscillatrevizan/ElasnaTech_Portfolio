@@ -385,6 +385,9 @@ p {
     margin-bottom: 2em;
     font-size: 2em;
 }
+#achievements .text-ach p{
+    display: none;
+}
 
 #achievements span {
     text-transform: capitalize;
@@ -399,8 +402,9 @@ p {
     #achievements h3 {
         color: var(--bg-btn-hover);
     }
-    #achievements p {
+    #achievements .text-ach p {
         color: var(--light-color);
+        display: block;
     }
     #achievements .text-ach h3{
         color: var(--bg-emphasis);
@@ -425,7 +429,6 @@ p {
     background-color: var(--bg-certificates);
     font-family: var(--p-font);
     color: var(--bs-color-02);
-    height: 59em;
 }    
 
 .img_elasnatech {
@@ -467,7 +470,7 @@ p {
 /*projects*/
 
 #projects{
-    margin: 0 3em 2em 3em;
+    margin: 8em 6em 2em 3em;
     box-sizing: border-box;
     font-size: 1em;
     color: var(--bg-emphasis);
@@ -481,6 +484,15 @@ p {
     display: inline-block; 
     margin-right: 15px; 
     vertical-align: middle; 
+}
+#tit-proj{
+    color: var(--bg-emphasis);
+    font-weight: 700;
+}
+#link{
+    color: var(--bg-principal);
+    text-decoration: none;
+    font-size: 1.3em;
 }
 
 .cards-container {
@@ -574,15 +586,15 @@ text-align: center;
     .img-portfolio {
         width: 200px;
         height: 200px;
-}.img-portfolio:hover {
-    background-position: 100% 0%;
-}
-}
-
-@media (max-width: 800px){
+    }.img-portfolio:hover {
+        background-position: 100% 0%;
+    }
     .cards-container{
         flex-direction: column;
         align-items: center;
+    }
+    #projects{
+        margin: 2em 6em 2em 3em;
     }
 }
 
@@ -599,6 +611,112 @@ footer{
 #experiences{
     margin-top: 2em;
     margin-bottom: 2em;
+}
+
+
+.video{
+    background-color: var(--sand-color);
+    padding-bottom: 1.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    line-height: 1.5em;
+}
+
+.video div{
+    text-align: center;
+    margin: auto;
+    width: 80%;
+}
+
+.video_titulo{
+    margin-top: 0;
+    padding-top: .5em;
+    color: var(--principal-color);
+}
+
+.video h1{
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+.video_paragrafo{
+    font-size: 1.5em;
+}
+
+.video_botao{
+    display: inline-block;
+    margin-top: 1em;
+    padding: 1em 2em;
+    background-color: var(--principal-color);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--light-color);
+    text-transform: uppercase;
+}
+
+.video_botao:hover{
+    background-color: color-mix(in srgb, var(--principal-color), var(--font-color) 90%);
+}
+
+.video_video{
+    display: none;
+}
+.video_paragrafo{
+    margin-bottom: 2em;
+    text-align: left;
+    color: var(--light-color);
+    font-size: 1.2em;
+}
+.video_titulo{
+    text-align: left;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+@media screen and (min-width: 576px ){
+
+    .video_botao{
+        display: none;
+    }
+
+    .video_video {
+        display: block;
+    }
+
+    .video_video .tamanho{
+        border-radius: .8em;
+        margin-bottom: 1em;
+    }
+
+    .video_paragrafo{
+        margin-bottom: 4em;
+    }
+    .video_titulo{
+        margin-top: 2em;
+        margin-bottom: 2em;
+}
+}
+.video_botao_article{
+    display: inline-block;
+    margin-top: 1em;
+    padding: 1em 2em;
+    background-color: var(--principal-color);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--light-color);
+    text-transform: uppercase
+}
+
+.video_botao_article:hover{
+    background-color: var(--second-color);
+    border: 1px solid var(--second-color);
+    font-size: 1.1em;
+}
+
+.main_content{
+    background-color: var(--light-color);
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 /*contacts*/
@@ -628,4 +746,14 @@ footer{
     margin-bottom: 10px;
     width: 32px;
     
+}
+
+#ico-social:hover {
+    width: 38px;
+}
+
+@media screen and (min-width: 36em){
+    footer, .contacts-footer{
+        flex-direction:row;
+    }
 }
