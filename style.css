@@ -198,6 +198,38 @@ input[type="checkbox"] {
     }
 }
 
+/*achievements*/
+
+#achievements{
+    background-color: var(--bg-certificates);
+    font-family: var(--p-font);
+    color: var(--bs-color-02);
+}    
+
+.img_elasnatech {
+    max-width: 300px;
+    width: 100%;
+}
+
+
+#achievements ol {
+    margin-left: 45px;
+    padding: 0; 
+
+}
+
+#achievements li {
+    display: inline-block; 
+    margin-right: 15px; 
+    vertical-align: middle; 
+}
+
+@media (min-width: 576px) {
+    .img_elasnatech {
+        max-width: 600px;
+    }
+}
+
 
 
 footer{
