@@ -296,7 +296,7 @@ p {
 
 /*about*/
 #about{
-    margin: 15em 3em 0 3em;
+    margin: 12em 3em 0 3em;
     max-width: 60em;
     font-size: 1em;
     color: var(--light-color);
@@ -310,18 +310,30 @@ p {
     color: var(--bg-emphasis);
 }
 
+.img-about {
+    display: none;
+}
+
 @media (min-width: 576px) {
     #about{
-        margin: 15em 45em 0 3em;
-        max-width: 60%;
+        margin: 16em 3em 0 3em;
+        max-width: 80%;
+        max-height: 20em;
         font-size: 0.8em;
+        background-image: url(assets/img/motiv_dark.png);
+        background-repeat: no-repeat;
+        background-size: 200px;
+        background-position: right;
+    }
+    #about p{
+        max-width: 60%;
     }
 }
 
 /*challanges*/
 
 #challanges{
-    margin: 15em 3em 0 3em;
+    margin: 12em 3em 0 3em;
     max-width: 60em;
     font-size: 1em;
     color: var(--light-color);
@@ -337,7 +349,7 @@ p {
 
 @media (min-width: 576px) {
     #challanges{
-        margin: 3em 15em 0 45em;
+        margin: 6em 12em 0 42em;
         max-width: 60%;
         font-size: 0.8em;
     }
@@ -345,13 +357,13 @@ p {
 
 /*achievements*/
 #achievements {
-  margin: 5em 3em 0 3em;
-  font-size: 1em;
-  color: var(--light-color);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center; 
+    margin: 6em 3em 0 3em;
+    font-size: 1em;
+    color: var(--light-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
 }
 
 #achievements li {
@@ -362,14 +374,16 @@ p {
 
 #achievements .badges li {
     list-style: none;
-  }
-
-#achievements p {
-  color: transparent;
 }
 
-#achievements h3 {
-  color: var(--bg-emphasis);
+#achievements p {
+    color: transparent;
+}
+
+#achievements .text-ach h3{
+    color: var(--bg-emphasis);
+    margin-bottom: 2em;
+    font-size: 2em;
 }
 
 #achievements span {
@@ -388,8 +402,14 @@ p {
     #achievements p {
         color: var(--light-color);
     }
+    #achievements .text-ach h3{
+        color: var(--bg-emphasis);
+        margin-bottom: 2em;
+        font-size: 3em;
+    }
 }
 .badges img {
+    margin-bottom: 6em;
     height: 10vh;
 }
 
@@ -397,13 +417,11 @@ p {
     height: 12vh;
 }
 
-
-
 /*learnings*/
 
 #learnings{
-    margin-top: 5em;
-    margin-bottom: 5em;
+    margin-top: 2em;
+    margin-bottom: 2em;
     background-color: var(--bg-certificates);
     font-family: var(--p-font);
     color: var(--bs-color-02);
@@ -414,7 +432,6 @@ p {
     max-width: 300px;
     width: 100%;
 }
-
 
 #learnings ol {
     margin-left: 45px;
@@ -428,35 +445,54 @@ p {
     vertical-align: middle; 
 }
 
+.flex-fill{
+    background-image: url(assets/img/elasnatech_light.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.flex-fill.dark {
+    background-image: url(assets/img/elasnatech_dark.png);
+}
+
 @media (min-width: 576px) {
     .img_elasnatech {
         max-width: 600px;
     }
     .text-ach{                    /*OK*/
-        margin: 35em 3em;
+        margin: 3em 3em;
     }
 }
-
-
-
 
 /*projects*/
 
 #projects{
-    margin-top: 2em;
-    margin-bottom: 5em;
+    margin: 0 3em 2em 3em;
+    box-sizing: border-box;
+    font-size: 1em;
+    color: var(--bg-emphasis);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+}
+
+#projects .cards-container .card .img-portfolio i{
+    display: inline-block; 
+    margin-right: 15px; 
+    vertical-align: middle; 
 }
 
 .cards-container {
     display:flex;
     justify-content: space-evenly;
-    gap: 16px;
+    gap: 2em;
     flex-wrap: wrap;
 }
 
 .card{
-    background-color: #300559;
-    color: #f6f6f6;
+    background-color: var(--bg-principal);
+    color: var(--bg-second);
     box-sizing: border-box;
     height: 400px;
     width: fit-content;
@@ -465,9 +501,9 @@ p {
 }
 
 .card:hover{
-    background-color:#f6f6f6;
-    color: #300559;
-    border: 2px solid #300559 ;
+    background-color:var(--bg-emphasis);
+    color: var(--bg-emphasis);
+    border: 6px solid var(--bg-btn-hover);
     text-decoration: none;
 }
 
@@ -480,6 +516,69 @@ text-align: center;
     height: 80%;
 }
 
+
+.img-portfolio {
+    display: flex;
+    width: 360px;
+    height: 360px;
+    background-color: var(--bg-btn-hover);
+    background-size: cover;
+    background-position: 100% 0%;
+    border-radius: 6px;
+    border: solid 1px var(--bg-btn-hover);
+    cursor: pointer;
+    transition: 25s;
+}
+
+.img-portfolio:hover {
+    background-position: 100% 100%;
+}
+
+.site1 {
+    background-image: url(assets/img/proj_01.png);
+}
+
+.site2 {
+    background-image: url(assets/img/proj_02.png);
+}
+
+.site3 {
+    background-image: url(assets/img/proj_03.png);
+}
+
+.site4 {
+    background-image: url(assets/img/proj_04.png);
+}
+
+.site5 {
+    background-image: url(assets/img/proj_05.png);
+}
+
+.site6 {
+    background-image: url(assets/img/proj_06.png);
+}
+
+.site7 {
+    background-image: url(assets/img/proj_07.png);
+}
+
+.site8 {
+    background-image: url(assets/img/proj_08.png);
+}
+
+.site9 {
+    background-image: url(assets/img/proj_09.png);
+}
+
+@media (max-width: 576px) {
+    .img-portfolio {
+        width: 200px;
+        height: 200px;
+}.img-portfolio:hover {
+    background-position: 100% 0%;
+}
+}
+
 @media (max-width: 800px){
     .cards-container{
         flex-direction: column;
@@ -488,7 +587,7 @@ text-align: center;
 }
 
 footer{
-    background-color: #1b013d;
+    background-color: var(--bg-second);
     padding: 16px;
     color: #f0f8ff;
     text-align: center;
@@ -498,21 +597,21 @@ footer{
 /*experiences*/
 
 #experiences{
-    margin-top: 5em;
-    margin-bottom: 5em;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 /*contacts*/
 
 #contacts{
-    margin-top: 5em;
-    margin-bottom: 5em;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 footer{
     padding: 0.5rem;
     background-color: var(--bg-emphasis);
-    color: var(--bs-color-02);
+    color: var(--bg-btn-hover);
     text-align: center;
     text-shadow: 1px 1px 2px black;
 }
