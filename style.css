@@ -51,16 +51,16 @@ body {
 
 input[type="checkbox"] {
     display: none;
-  }
-  
-  .bi {
+}
+
+.bi {
     font-size: 1.3rem;
     cursor: pointer;
-  }
-  
-  .bi-moon {
+}
+
+.bi-moon {
     display: none;
-  }
+}
 
 /* Dark theme */
 .dark, .dark header {
@@ -77,20 +77,20 @@ input[type="checkbox"] {
 
 .dark,
 .dark header {
-  background-color: #263238;
-  color: #fff;
+    background-color: #263238;
+    color: #fff;
 }
 
 .dark .bi-sun {
-  display: none;
+    display: none;
 }
 
 .dark .bi-moon {
-  display: block;
+    display: block;
 }
 
 .dark .btn {
-  background-color: #67b4f3;
+    background-color: #67b4f3;
 }
 
 
@@ -200,6 +200,14 @@ input[type="checkbox"] {
 
 /*achievements*/
 
+.text-ach{
+    position: absolute;
+    margin-top: 25em;
+    margin-left: 10em;
+    width: 50em;
+    font-size: 20px;
+}
+
 #achievements{
     background-color: var(--bg-certificates);
     font-family: var(--p-font);
@@ -228,10 +236,11 @@ input[type="checkbox"] {
     .img_elasnatech {
         max-width: 600px;
     }
+
 }
 
 
-
+/*footer*/
 footer{
     padding: 0.5rem;
     background-color: var(--bg-emphasis);
