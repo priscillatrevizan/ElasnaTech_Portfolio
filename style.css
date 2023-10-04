@@ -1,18 +1,17 @@
 /* Estilo Global */
-
-body, ul{
-    margin: 0px;
-    padding: 0px;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-a, a:hover {
+a {
+    font-family: 'Quicksand', sans-serif;
     text-decoration: none;
-    color: rgb(149, 10, 161); 
-    text-transform: capitalize;
 }
 
 :root {
-    --primary-color:#006F83
+    --primary-color:#006F83;
     --secondary-color: rgb(255, 255, 255);
     --bg-principal: rgb(221, 221, 221); 
     --bg-bar: rgba(190, 235, 225, 0.251);
@@ -35,29 +34,86 @@ a, a:hover {
     --bg-btn-hover: rgb(115, 240, 163);
 }
 
-
 /* Barra de navegação principal */
-
+body {
+    height: 100%;
+    transition: 0.3s;
+}
 #logo-container {
     display: flex;
     align-items: center;
 }
 
 #logo {
-    max-width: 32px;
+    max-width: 50px;
+    margin-inline-start: 2rem;
 }
 
-#header{
-    background-color: var(--bg-emphasis);
-    border-radius: 20px;
-    margin: 10px;
-    box-sizing: border-box;
-    height: 70px;
-    padding: 1rem;
+input[type="checkbox"] {
+    display: none;
+  }
+  
+  .bi {
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+  
+  .bi-moon {
+    display: none;
+  }
+
+/* Dark theme */
+.dark, .dark header {
+    --bs-color-01: rgb(4, 243, 132);
+    --bs-color-02: rgb(255, 255, 255);
+    --bg-principal: rgb(0, 0, 41); 
+    --bg-bar: rgba(0, 0, 41, 0.251);
+
+    --bg-emphasis: rgb(115, 240, 163);
+    --bg-btn-hover: rgb(115, 240, 163);
+    --bg-font--title: rgb(115, 240, 163);
+    --bg-certificates:rgba(0, 0, 36,0.3)
+}
+
+.dark,
+.dark header {
+  background-color: #263238;
+  color: #fff;
+}
+
+.dark .bi-sun {
+  display: none;
+}
+
+.dark .bi-moon {
+  display: block;
+}
+
+.dark .btn {
+  background-color: #67b4f3;
+}
+
+
+#header {
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0.3rem;
+    box-sizing: border-box;
+    height: 5rem;
+    padding: 1rem;
+    box-shadow: 0.5px 0.5px 10px 0.5px #000;
+    position: relative;
 }
+
+
 
 #menu{
     display: flex;
