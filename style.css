@@ -11,13 +11,15 @@ a {
 }
 
 :root {
-    --bs-color-01: rgb(4, 243, 132);
-    --bs-color-02: rgb(255, 255, 255);
-    --bg-principal: rgb(221, 221, 221); 
-    --bg-bar: rgba(190, 235, 225, 0.251);
+    --bg-principal:  #DBF6F6;
+    --bg-second: #D2FFE6;    
+    --bs-color-01: #011526;
+    --bs-color-02: #021E24;
+    --bg-emphasis: #059172;
+    --bg-btn-hover: #021E24;
+    --light-color: #263238;
 
-    --bg-emphasis: rgb(40, 102, 76);
-    --bg-btn-hover: rgb(17, 51, 37);
+
     --title-font: 'Fira Sans', sans-serif;
     --subtitle-font: 'Montserrat Alternates', sans-serif;
     --body-font: 'Open Sans', sans-serif;
@@ -26,13 +28,13 @@ a {
 
 /* Dark theme */
 .dark, .dark header {
-    --bs-color-01: rgb(4, 243, 132);
-    --bs-color-02: rgb(255, 255, 255);
-    --bg-principal: rgb(17, 51, 37);
-    --bg-bar: rgb(40, 102, 76);
-
-    --bg-emphasis: rgb(115, 240, 163);
-    --bg-btn-hover: rgb(115, 240, 163);
+    --bg-principal: #011526;
+    --bg-second: #021E24;    
+    --bs-color-01: #DBF6F6;
+    --bs-color-02: #D2FFE6;
+    --bg-emphasis: #b4fcc9;
+    --bg-btn-hover: #14F9C9;
+    --light-color: #99bfd8;
 }
 
 
@@ -51,8 +53,8 @@ input[type="checkbox"] {
 
 .dark,
 .dark header {
-    background-color: #263238;
-    color: #fff;
+    background-color: var(--bg-principal);
+    color: var(--bs-color-01);
 }
 
 .dark .bi-sun {
@@ -64,7 +66,7 @@ input[type="checkbox"] {
 }
 
 .dark .btn {
-    background-color: #67b4f3;
+    background-color: var(--bg-emphasis);
 }
 
 /* Barra de navegação principal */
@@ -88,7 +90,7 @@ body {
     position: relative;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--bg-principal);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border-radius: 1.3rem;
@@ -106,21 +108,25 @@ body {
     display: flex;
     list-style: none;
     gap: .5rem;  
+    border: none;
 }
 
 #menu a {
-    color: var(--bg-principal);
+    color: var(--bg-emphasis);
     display: block;
     padding: .5rem;
+    text-decoration: none;
+    border-radius: 6px;
 }
 
 #menu a:hover {
     background-color: var(--bg-btn-hover);
-    color: var(--bg-bar);
+    color: var(--bg-principal);
 }
 
 #btn-mobile {
     display: none;
+    border: none;
 }
 
 @media (max-width: 600px) {
@@ -135,7 +141,7 @@ body {
         right: 0px;
         background-color: var(--bg-principal);
         transition: 0.6s;
-        z-index: 1000;
+        z-index: 999;
         height: calc(100vh-70px);
     }
     #nav.active #menu {
@@ -145,7 +151,7 @@ body {
     #menu a {
         padding: 1rem 0;
         margin: 0 1rem;
-        border-bottom: 2px solid var(--bs-color-01)
+        border-bottom: 2px solid var(--bg-emphasis);
     }
     #btn-mobile {
         display: flex;
@@ -156,7 +162,7 @@ body {
         cursor: pointer;
     }
     #hamburguer {
-        color: var(--bg-certificates);
+        color: var(--bg-emphasis);
         display: block;
         width: 20px;
         border-top: 2px solid;
@@ -186,28 +192,38 @@ body {
 }
 
 /* Estilo para o título */
-.title {
+#title {                      
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    margin-top: 10em;
-    margin-left: 4em; /* Ajuste a margem conforme necessário */
+    margin-top: 8em;
+    margin-left: 4em;
+    color: var(--light-color); 
+}
+
+#title img{
+    max-width: 0;
+    align-items: center;
 }
 
 h2 {
-    font-size: 1.3em; /* Ajuste o tamanho do nome conforme necessário */
+    font-size: 1.3em; 
 }
 
-.title .name {
-    font-size: 2em; /* Ajuste o tamanho do nome conforme necessário */
+#title .name {
+    font-size: 3em; 
     font-weight: bold;
-    color: var(--bg-bar);
+    color: var(--bg-emphasis);
 }
 
 p {
-    font-size: 20px; /* Ajuste o tamanho do "Olá, eu sou a" conforme necessário */
+    font-size: 20px;
     color: var(--bg-bar);
+}
+
+.text-title{
+    margin-top: 1.3em;
 }
 
 .roles {
@@ -218,11 +234,13 @@ p {
 .role {
     font-size: 20px;
     color: var(--bg-bar);
-    opacity: 0; /* Começa com a opacidade em 0 */
+    opacity: 0; 
     animation: slideInFromLeft 6s ease-in-out infinite;
+    z-index: -1;
 }
 
 /* Animação para alternar entre as roles */
+
 @keyframes slideInFromLeft  {
     0%, 100% {
         opacity: 0;
@@ -238,8 +256,8 @@ p {
     }
 }
 
-@media (min-width:576px) {
-    .title {
+@media (min-width:576px) {        /*OK*/
+    #title {
         margin-left: 16em; 
     }
 
@@ -251,12 +269,12 @@ p {
         font-size: 2em;
     }
     
-    .title .name {
+    #title .name {
         font-size: 4em;
     }
     
     p {
-        font-size: 1.6em; /* Ajuste o tamanho do "Olá, eu sou a" conforme necessário */
+        font-size: 1.6em; 
     }
     
     .roles {
@@ -267,47 +285,123 @@ p {
     .role {
         font-size: 1.6em;
     }
+    #title img{
+        position: absolute;
+        margin-top: 0;
+        margin-left: 40%;
+        max-width: 20em;
+        align-items: center;
+    }
 }
 
 /*about*/
 #about{
-    margin-top: 5em;
-    margin-bottom: 5em;
+    margin: 15em 3em 0 3em;
+    max-width: 60em;
+    font-size: 1em;
+    color: var(--light-color);
+    z-index: -1;
 }
 
-/*journey*/
+#about h1  {
+    color: var(--bg-btn-hover);
+}
+#about h3 {
+    color: var(--bg-emphasis);
+}
 
-#journey{
-    margin-top: 5em;
-    margin-bottom: 5em;
+@media (min-width: 576px) {
+    #about{
+        margin: 15em 45em 0 3em;
+        max-width: 60%;
+        font-size: 0.8em;
+    }
 }
 
 /*challanges*/
 
 #challanges{
-    margin-top: 5em;
-    margin-bottom: 5em;
+    margin: 15em 3em 0 3em;
+    max-width: 60em;
+    font-size: 1em;
+    color: var(--light-color);
+    z-index: -1;
+}
+
+#challanges h1  {
+    color: var(--bg-btn-hover);
+}
+#challanges h3 {
+    color: var(--bg-emphasis);
+}
+
+@media (min-width: 576px) {
+    #challanges{
+        margin: 3em 15em 0 45em;
+        max-width: 60%;
+        font-size: 0.8em;
+    }
 }
 
 /*achievements*/
+#achievements {
+  margin: 5em 3em 0 3em;
+  font-size: 1em;
+  color: var(--light-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; 
+}
 
+#achievements li {
+    display: inline-block; 
+    margin-right: 15px; 
+    vertical-align: middle; 
+}
+
+#achievements .badges li {
+    list-style: none;
+  }
+
+#achievements p {
+  color: transparent;
+}
+
+#achievements h3 {
+  color: var(--bg-emphasis);
+}
+
+#achievements span {
+    text-transform: capitalize;
+}
+
+@media (min-width: 576px) {
+
+
+    #achievements h1  {
+        color: var(--bg-btn-hover);
+    }
+    #achievements h3 {
+        color: var(--bg-btn-hover);
+    }
+    #achievements p {
+        color: var(--light-color);
+    }
+}
 .badges img {
-    height: 5vh;
+    height: 10vh;
 }
 
 .badges img:hover {
-    height: 7vh;
+    height: 12vh;
 }
 
-.text-ach{
-    position: absolute;
-    margin-top: 25em;
-    margin-left: 10em;
-    width: 50em;
-    font-size: 20px;
-}
 
-#achievements{
+
+/*learnings*/
+
+#learnings{
     margin-top: 5em;
     margin-bottom: 5em;
     background-color: var(--bg-certificates);
@@ -322,13 +416,13 @@ p {
 }
 
 
-#achievements ol {
+#learnings ol {
     margin-left: 45px;
     padding: 0; 
 
 }
 
-#achievements li {
+#learnings li {
     display: inline-block; 
     margin-right: 15px; 
     vertical-align: middle; 
@@ -338,20 +432,18 @@ p {
     .img_elasnatech {
         max-width: 600px;
     }
+    .text-ach{                    /*OK*/
+        margin: 35em 3em;
+    }
 }
 
-/*learnings*/
 
-#learnings{
-    margin-top: 5em;
-    margin-bottom: 5em;
-}
 
 
 /*projects*/
 
 #projects{
-    margin-top: 5em;
+    margin-top: 2em;
     margin-bottom: 5em;
 }
 

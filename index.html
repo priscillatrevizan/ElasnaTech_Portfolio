@@ -36,7 +36,6 @@
             </button>
             <ul id="menu" role="menu">
                 <li><a href="#about">sobre</a></li>
-                <li><a href="#journey">jornada</a></li>
                 <li><a href="#challanges">desafios</a></li>
                 <li><a href="#achievements">conquistas</a></li>
                 <li><a href="#learnings">aprendizados</a></li>
@@ -46,57 +45,63 @@
             </ul>
         </nav>
     </header>
-    <div class="title">
-        <h2>Olá, eu sou a </h2>
-        <h1 class="name">Priscilla Trevizan</h1>
-        <div class="roles">
-            <span class="role">Desenvolvedora FrontEnd Junior</span>
-            <span class="role">Designer UI/UX Junior</span>
+    <div id="title">
+        <a><img src="assets/img/photo.png"></a>
+        <div class="text-title">
+            <h2>Olá, eu sou a </h2>
+            <h1 class="name">Priscilla Trevizan</h1>
+            <div class="roles">
+                <span class="role">Desenvolvedora FrontEnd Junior</span>
+                <span class="role">Designer UI/UX Junior</span>
+            </div>
         </div>
     </div>
     <main>
         <section id="about">
-            <a><img src="#"></a>
+            
             <div class="cards-container"></div>
             <div class="about">
                 <h1>Sobre mim</h1>
-                <h3>Desenvolvedora Front-end júnior, foco-me em trazer ao cliente uma experiência que vai além do código.</h3>
-                <p>Minha criatividade sempre foi uma parte essencial de quem sou. Desde jovem, a curiosidade e a imaginação eram traços marcantes em minha vida. No entanto, essas paixões criativas permaneceram em segundo plano enquanto eu trabalhava em um papel administrativo contábil. Nessa função, não apenas lidava com números, mas também encontrei maneiras de transformar conceitos complexos em designs atrativos para marketing e documentação. Minha inquietação e desejo de explorar meu potencial criativo me levaram a tomar uma decisão corajosa: mudar de carreira. Através do UI/UX e, posteriormente, do desenvolvimento frontend, descobri um mundo emocionante onde posso expressar minha criatividade, transformando ideias em interfaces cativantes e funcionais.</p>
+                <h3>Criatividade além do código</h3>
+                <p>Sempre considerei a criatividade uma parte fundamental da minha vida, desde a juventude. Apesar de ter trabalhado em um papel administrativo contábil por um longo tempo, decidi corajosamente mudar de carreira e explorar meu potencial criativo no emocionante mundo do desenvolvimento UI/UX e frontend . Finalmente, posso expressar minha criatividade transformando ideias em interfaces atraentes e funcionais.</p>
             </div>
 
         </section>
 
-        <section id="journey">
-
-        </section>
-
         <section id="challanges">
-
+            <div class="cards-container"></div>
+            <div class="challanges">
+                <h1>Desafios</h1>
+                <h3>Medo do desconhecido</h3>
+                <p>Os obstáculos mais desafiadores que encontrei pelo caminho estão ligados ao meu próprio medo e incerteza. Deixar um caminho conhecido e relativamente seguro para recomeçar do zero não é uma tarefa para amadores.</p>
+            </div>
         </section>
 
         <section id="achievements">
+            <div class="text-ach">
+                <div class="badges">
+                    <ol>
+                        <li><img src="assets/img/icons8-visual-studio-100.png" class="icon-code"></li>
+                        <li><img src="assets/img/icons8-css-128.png" class="icon-css"></li>
+                        <li><img src="assets/img/icons8-git-100.png" class="icon-git"></li>
+                        <li><img src="assets/img/icons8-javascript-100.png" class="icon-js"></li>
+                        <li><img src="assets/img/icons8-python-100.png" class="icon-python"></li>
+                        <li><img src="assets/img/icons8-github-100.png" class="icon-github"></li>
+                        <li><img src="assets/img/icons8-bootstrap.png" class="icon-bootstrap"></li>
+                    </ol>                 
+                </div>
+                <h3>Feliz em compartilhar as <span>conquistas</span> e <span>aprendizados</span>!</h3>
+                <p>Com orgulho, compartilho minhas conquistas de aprendizado com o programa 'Elas na Tech'. Certificados em JavaScript, Bootstrap, Python, Inteligência Artificial, Git, Frontend Web e muito mais. Aprendi não apenas a linguagem da programação, mas também a importância da colaboração, networking e habilidades interpessoais. Essas conquistas são apenas o começo da minha jornada na tecnologia. Acompanhe meu progresso e continue explorando o incrível mundo da programação.</p>
+            </div>
+        </section>
+
+        <section id="learnings">
             <div class="d-flex justify-content-between">
                 <!-- Conteúdo à esquerda do carrossel -->
                     <div class="flex-fill" style="max-width:50%">
                         <img src="assets/img/stroke.png" class="img_elasnatech">
-                        <div class="badges">
-                            <ol>
-                                <li><img src="assets/img/icons8-visual-studio-100.png" class="icon-code"></li>
-                                <li><img src="assets/img/icons8-css-128.png" class="icon-css"></li>
-                                <li><img src="assets/img/icons8-git-100.png" class="icon-git"></li>
-                                <li><img src="assets/img/icons8-javascript-100.png" class="icon-js"></li>
-                                <li><img src="assets/img/icons8-python-100.png" class="icon-python"></li>
-                                <li><img src="assets/img/icons8-github-100.png" class="icon-github"></li>
-                                <li><img src="assets/img/icons8-bootstrap.png" class="icon-bootstrap"></li>
-                            </ol>                 
-                        </div>
-                    </div>  
+                    </div>         
 
-                    <div class="text-ach">
-                        <h3>Feliz em compartilhar as conquistas!</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ducimus sit assumenda. Reiciendis illo tempore, pariatur consectetur cumque, nisi fugiat aut sit quae necessitatibus eum incidunt cum dolorum. Quia nobis vel unde quo a facere libero labore exercitationem, tempore dicta amet! In et accusamus eius voluptates. Quisquam corporis possimus veniam!</p>
-                    </div>
-                    
                     <div id="Slider" class="carousel slide flex-fill" data-bs-ride="carousel" style="max-width: 50%">
                         <ol class="carousel-indicators">
                             <li data-bs-target="#Slider" data-bs-slide-to="0" class="active"></li>
@@ -158,9 +163,6 @@
             </div>  
         </section>    
 
-        <section id="learnings">
-            
-        </section>
 
         <section id="projects">
             <h1>Projetos</h1>
