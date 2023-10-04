@@ -109,14 +109,14 @@ body {
 }
 
 #menu a {
-    color: var(--bg-font--title);
+    color: var(--bg-principal);
     display: block;
     padding: .5rem;
 }
 
 #menu a:hover {
     background-color: var(--bg-btn-hover);
-    color: var(--bg-font--title);
+    color: var(--bg-bar);
 }
 
 #btn-mobile {
@@ -156,7 +156,7 @@ body {
         cursor: pointer;
     }
     #hamburguer {
-        color: var(--bg-font--title);
+        color: var(--bg-certificates);
         display: block;
         width: 20px;
         border-top: 2px solid;
@@ -185,7 +185,13 @@ body {
     }
 }
 
-/*about*/
+
+/*presentation*/
+
+#presentation{
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
 
 .presentation {
     background-image: url(assets/img/photo.png);
@@ -210,7 +216,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--bg-font--title);  
+    font-family: var(--bg-emphasis);  
     display: flex;
     justify-content: center;
     align-items: center;
@@ -249,7 +255,25 @@ body {
     }
 }
 
+/*about*/
+#about{
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
 
+/*journey*/
+
+#journey{
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+/*challanges*/
+
+#challanges{
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
 
 /*achievements*/
 
@@ -270,6 +294,8 @@ body {
 }
 
 #achievements{
+    margin-top: 5em;
+    margin-bottom: 5em;
     background-color: var(--bg-certificates);
     font-family: var(--p-font);
     color: var(--bs-color-02);
@@ -298,10 +324,22 @@ body {
     .img_elasnatech {
         max-width: 600px;
     }
-
 }
 
+/*learnings*/
+
+#learnings{
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+
 /*projects*/
+
+#projects{
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
 
 .cards-container {
     display:flex;
@@ -351,7 +389,20 @@ footer{
     font-weight: 600;
 }
 
-/*footer*/
+/*experiences*/
+
+#experiences{
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+/*contacts*/
+
+#contacts{
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
 footer{
     padding: 0.5rem;
     background-color: var(--bg-emphasis);
